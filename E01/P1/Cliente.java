@@ -1,4 +1,3 @@
-package E01;
 public class Cliente {
     int numero;
     double saldo;

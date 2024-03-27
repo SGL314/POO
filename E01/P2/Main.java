@@ -1,8 +1,7 @@
-package E01;
 public class Main{
     public static void main(String[] args){
         Cliente objA = new Cliente();
-        Cliente objB = new Cliente();
+        Cliente objB = objA;
 
         objA.dono = "Lobato";
         objA.saldo = 2300;
