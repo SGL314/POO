@@ -1,3 +1,5 @@
+import src.Classes.Cliente;
+
 public class Cliente {
     int numero;
     double saldo;
