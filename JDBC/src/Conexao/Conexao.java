@@ -3,41 +3,54 @@ package src.Conexao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.lang.Class;
+
 
 public class Conexao {
-
-    static private Connection conexao = null;
 
     final private static String MYSQL_JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     final private static int DB_PORT = 3306;
     final private static String DB_HOST = "localhost";
-    final private static String DB_NAME = "JDBC";
+    final private static String DB_NAME = "coltec";
 
-    public static Connection getConnection(){
+    // Bloco estático para carregamento do driver
+    static {
+         // Carrega o Driver do JDBC MYSQL
         try {
             Class.forName(MYSQL_JDBC_DRIVER);
-        } catch (ClassNotFoundException e){
-            System.out.println("Erro");
-            e.getMessage();
-            return null;
+        } catch (ClassNotFoundException ex) {
+            System.err.println("Falha ao carregar o Driver do JDBC MySQL");
         }
+    }
 
+    static private Connection conexao = null;
+
+    private Conexao() {}
+
+    public static Connection getConnection(){
+
+        // Configurações de conexão
         String url = "jdbc:mysql:// " + DB_HOST + ":" + DB_PORT + "/" + DB_NAME;
         String usuario = "root";
-        String senha = "sglpass";
+        String senha = "senhaSuperSegura";
 
         try {
             if (conexao == null) {
                 conexao = DriverManager.getConnection(url, usuario, senha);
             }
-            System.out.println(conexao);
             return conexao;
-        } catch (SQLException e){
-            System.out.println("Erro driver");
-            e.getMessage();
+        } catch (SQLException e) {
             return null;
         }
-
     }
+
+    public static void fechaConexao() {
+        try {
+        if (conexao != null) conexao.close();
+        } catch (SQLException e) {
+            // Faço nada
+        }
+    }
+
+
+
 }
