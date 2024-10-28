@@ -1,0 +1,5 @@
+{
+    "java.debug.settings.debugSupportOnDecompiledSource": "off",
+    "java.references.includeDecompiledSources": false,
+    "dotnet.navigation.navigateToDecompiledSources": false
+}
