@@ -1,8 +1,7 @@
-package src.Conexao;
+package Conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.Driver;
 import java.sql.SQLException;
 
 
