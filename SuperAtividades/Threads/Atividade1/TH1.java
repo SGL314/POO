@@ -1,4 +1,4 @@
-package SuperAtividades.Threads.Atividade1;
+
 
 public class TH1 implements Runnable{
     TH1(){

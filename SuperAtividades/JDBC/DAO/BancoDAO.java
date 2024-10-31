@@ -1,11 +1,9 @@
 package DAO;
 
-
+import Conexao.Conexao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import Conexao.Conexao;
 
 public class BancoDAO { 
     public static void createTable(){
