@@ -13,14 +13,14 @@ public class Conexao {
     final private static String DB_NAME = "coltec";
 
     // Bloco estático para carregamento do driver
-    static {
-         // Carrega o Driver do JDBC MYSQL
-        try {
-            Class.forName(MYSQL_JDBC_DRIVER);
-        } catch (ClassNotFoundException ex) {
-            System.err.println("Falha ao carregar o Driver do JDBC MySQL");
-        }
-    }
+    // static {
+    //      // Carrega o Driver do JDBC MYSQL
+    //     try {
+    //         Class.forName(MYSQL_JDBC_DRIVER);
+    //     } catch (ClassNotFoundException ex) {
+    //         System.err.println("Falha ao carregar o Driver do JDBC MySQL");
+    //     }
+    // }
 
     static private Connection conexao = null;
 
@@ -39,6 +39,7 @@ public class Conexao {
             }
             return conexao;
         } catch (SQLException e) {
+            System.out.println("Going null");
             return null;
         }
     }

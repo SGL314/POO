@@ -1,4 +1,4 @@
-package Threads.Atividade2;
+package SuperAtividades.Threads.Atividade2;
 
 import java.util.Random;
 

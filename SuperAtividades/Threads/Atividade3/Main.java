@@ -1,4 +1,4 @@
-package Threads.Atividade2;
+package SuperAtividades.Threads.Atividade3;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Main {
         Thread th1 = new Thread(pares);
         Thread th2 = new Thread(impares);
 
-        th1.start();
         th2.start();
+        th1.start();
     }
 }

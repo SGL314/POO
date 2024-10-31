@@ -1,4 +1,4 @@
-package Threads.Atividade1;
+package SuperAtividades.Threads.Atividade1;
 
 class Main{
     public static void main(String args[]){
