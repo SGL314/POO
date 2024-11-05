@@ -1,13 +1,14 @@
-package SuperAtividades.Threads.Atividade3;
-
+import java.lang.Thread;
 public class Main {
     public static void main(String[] args) {
-        Pares pares = new Pares();
-        Impares impares = new Impares();
+        Object mon = new Object();
+        Pares pares = new Pares(mon);
+        Impares impares = new Impares(mon);
+        
         Thread th1 = new Thread(pares);
         Thread th2 = new Thread(impares);
 
-        th2.start();
         th1.start();
+        th2.start();
     }
 }

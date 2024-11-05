@@ -1,5 +1,12 @@
 {
     "java.debug.settings.debugSupportOnDecompiledSource": "off",
     "java.references.includeDecompiledSources": false,
-    "dotnet.navigation.navigateToDecompiledSources": false
+    "dotnet.navigation.navigateToDecompiledSources": false,
+    "java.project.sourcePaths": [
+        "SuperAtividades\\JDBC",
+        "SuperAtividades\\Threads\\Atividade1"
+    ],
+    "java.project.referencedLibraries": [
+        "SuperAtividades\\JDBC\\Conexao\\mysql-connector-j-9.0.0.jar"
+    ]
 }

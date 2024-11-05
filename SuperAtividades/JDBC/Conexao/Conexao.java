@@ -7,14 +7,14 @@ import java.sql.SQLException;
 
 public class Conexao {
 
-    final private static String MYSQL_JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    final private static String MYSQL_JDBC_DRIVER = "mvn archetype:generate -DgroupId=com.exemplo -DartifactId=meu_projeto_maven -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false\r\n" + //
+                "";
     final private static int DB_PORT = 3306;
     final private static String DB_HOST = "localhost";
     final private static String DB_NAME = "coltec";
-
+    
     // Bloco estático para carregamento do driver
     // static {
-    //      // Carrega o Driver do JDBC MYSQL
     //     try {
     //         Class.forName(MYSQL_JDBC_DRIVER);
     //     } catch (ClassNotFoundException ex) {
